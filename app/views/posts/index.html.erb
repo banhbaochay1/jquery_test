@@ -1,0 +1,23 @@
+<h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+<hr/>
+<h1>Test jQuery normal</h1>
+<div id='test'>
+	Hello world, test jquery
+</div>
+<br/>
+<button class="show-hide">Show/Hide div</button>
+<%= link_to "Show/Hide div", "#", :class => 'show-hide' %>
+<br/>
+
+<hr/>
+<h1>Posts</h1>
+
+<div id="post_form">
+  <%= render 'form' %>
+</div>
+
+<ul id="posts">
+  <%= render @posts %>
+</ul>
+

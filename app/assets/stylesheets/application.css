@@ -1,0 +1,154 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+html, body {
+  font-family: Arial;
+  font-size: 16pt;
+}
+
+textarea {
+  font-family: Arial;
+  font-size: 16pt;
+  width: 500px;
+  height: 100px;
+  padding: 8px;
+}
+
+#posts ul {
+  margin: 0;
+  padding: 0;
+}
+
+#posts li {
+  margin-left: -30pt;
+  margin-bottom: 8px;
+  padding: 8px;
+  list-style: none;
+  border: 1px solid #ccc;
+}
+
+#test {
+	color: red;
+}
+
+body
+{
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+body, p, ol, ul, td
+{
+  font-family: "Myriad Pro","Myriad Web", helvetica, sans-serif;
+  font-size:   14px;
+}
+
+.small
+{
+  font-size: 12px;
+}
+
+h3
+{
+  font-size: 20px;
+}
+
+h3 a
+{
+  text-decoration: none;
+}
+
+pre
+{
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #444; }
+a:visited { color: #444; }
+a:hover { color: #980000; }
+
+div.field, div.actions
+{
+  margin-bottom: 10px;
+}
+
+.fieldWithErrors
+{
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation
+{
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2
+{
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p
+{
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li
+{
+  font-size: 12px;
+  list-style: square;
+}
+
+div.flash.notice
+{
+  display: block;
+  padding: 10px;
+  border: 1px solid #3A991A;
+  background-color: #ABD7A4;
+  margin: 20px 10px;
+  color: #000000;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.comment
+{
+  display: block;
+  background: #E5EEED;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.dateandoptions
+{
+	float:right;
+	color:gray;
+	text-align:right;
+}
+
