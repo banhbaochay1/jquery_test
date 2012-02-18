@@ -1,3 +1,47 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$width-post: 800px;
+$body-margin-left: 40px;
+$title-margin-left: 10px;
+$title-post-color: #E0E0E0;
+$body-post-color: #E5EEED;
+
+
+.title {
+  background-color: $title-post-color;
+  border-radius: 20px 20px 20px 20px;
+  font-size: 2em;
+  margin: 10px;
+  padding: 10px;
+  width: $width-post;
+}
+
+.body {
+  background-color: $body-post-color;
+  border-radius: 20px 20px 20px 20px;
+  font-size: 1.6em;
+  margin: 20px 10px 30px $body-margin-left;
+  padding: 10px;
+  width: $width-post - $body-margin-left + $title-margin-left;
+}
+
+#all_post {
+  background-color: white;
+  margin: 20px 0px 0px 80px;
+}
+
+.comments {
+  h2 {
+    margin-left: 50px;
+  }
+}
+
+.add_comment {
+  .new_comment {
+    margin-left: 90px;
+  }
+  h2 {
+    margin-left: 50px;
+  }
+}

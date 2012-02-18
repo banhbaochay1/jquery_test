@@ -5,6 +5,7 @@
 // the compiled file.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require_tree .
 jQuery(function() {
@@ -17,9 +18,9 @@ jQuery(function() {
 	$('.show-hide').click(function() {
 		// $('#test').slideToggle();
 		jQuery('#test').css("color", "blue");
-		// jQuery('#test').effect("highlight", {}, 1500);
-		$('#test').hide();
+		jQuery('#test').effect("highlight", {}, 1500);
+		// $('#test').hide();
 		// $('#test').fadeOut('slow');
 	});
-		
+	
 });

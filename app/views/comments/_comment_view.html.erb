@@ -1,0 +1,14 @@
+<%= content_tag_for(:div, comment) do %>
+	<div class="title_comment">
+		<%= content_tag(:span, comment.name) %> says:
+		<div class="time_comment">
+			Posted <%=time_ago_in_words(comment.created_at)%> ago<br />
+		</div>
+		<div class="delete_comment">
+			<%= link_to "Delete", post_comment_path(Post.find(comment.post_id), comment), :method => :delete, :remote => true%>
+		</div>
+	</div>
+	<div class="body_comment">
+		<%= comment.content %>
+	</div>
+<% end %>

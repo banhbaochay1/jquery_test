@@ -10,6 +10,7 @@ gem 'sqlite3'
 gem 'json'
 gem 'therubyracer'
 gem 'ruby-debug'
+gem 'hirb'
 
 # Gems used only for assets and not required
 # in production environments by default.

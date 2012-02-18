@@ -1,0 +1,24 @@
+<%= link_to "Edit post", edit_post_path(post) %>
+<%= content_tag_for (:div, post) do %>
+	<div class="title"><%= post.title %></div>
+	<div class="body"><%= post.body %></div>
+	<div class="comments" id="post_comments_<%= post.id %>">
+		<%= content_tag(:h2, "Comments:") %>
+		<%= render(:partial => '/comments/comment_view', :collection => post.comments, :as => :comment) || "No comment"%>
+	</div>
+	<div class="add_comment">
+		<%= content_tag(:h2, "Add comment")%>
+		<%= form_for([post, post.comments.build], :html => {:id => "form_comment_#{post.id}"}, :remote => true) do |f| %>
+			<div class="field">
+				<%= f.label :name %><br/>
+				<%= f.text_field :name %><br/>
+				<%= f.label :content %><br/>
+				<%= f.text_field :content %>
+			</div>
+			<div class="actions">
+				<%= f.submit "Submit"%>
+			</div>
+			
+		<% end %>
+	</div>
+<% end %>
