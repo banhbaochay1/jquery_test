@@ -1,4 +1,10 @@
 <h2>Show post</h2>
-Title: <%= @post.title %><br/>
-Body: <%= @post.body %><br/>
+<div class="post_container">
+	<div class="title">
+		<%= @post.title %>
+	</div>
+	<div class="body">
+		<%= @post.body %>
+	</div>
+</div>
 <%= link_to 'Back', posts_path %>

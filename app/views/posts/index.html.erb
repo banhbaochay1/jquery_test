@@ -10,6 +10,11 @@
 <%= link_to "Show/Hide div", "#", :class => 'show-hide' %>
 <br/>
 
+<ul id="abc">
+	
+</ul>
+<%= link_to "Add post", test_posts_path, :remote => true %>
+
 <hr/>
 <h1>Posts</h1>
 
@@ -20,4 +25,8 @@
 <ul id="posts">
   <%= render @posts %>
 </ul>
-
+<hr/>
+<h1>Test render</h1>
+<div id="all_post">
+	<%= render :partial => 'post_view', :collection => @posts, :as => :post %>
+</div>

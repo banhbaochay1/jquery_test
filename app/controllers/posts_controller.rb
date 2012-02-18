@@ -1,4 +1,11 @@
 class PostsController < ApplicationController
+	def test
+		@post = Post.first
+		respond_to do |format|
+			format.js
+		end
+	end
+	
   def index
   	@posts = Post.all
   	
@@ -34,6 +41,8 @@ class PostsController < ApplicationController
   
   def update
   	@post = Post.find(params[:id])
+  	print "\nparams\n"
+  	print params[:post][:title]
   	
   	respond_to do |format|
   		if @post.update_attributes(params[:post])

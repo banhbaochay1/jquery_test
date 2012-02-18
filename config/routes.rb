@@ -1,7 +1,12 @@
 JqueryTest::Application.routes.draw do
-  resources :comments
-
-  resources :posts
+	
+  resources :posts do
+  	collection do
+  		get 'test'
+  	end
+  	resources :comments
+  end
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

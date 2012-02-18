@@ -1,3 +1,31 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$comment-color: #FFEEFF;
+$border-radius: 10px;
+
+.comment {
+  background-color: $comment-color;
+  border-radius: $border-radius;
+  margin: 10px 710px 10px 90px;
+  padding: 10px;
+  
+  .title_comment {
+    span {
+      font-weight: bold;
+    }
+    .time_comment {
+      font-style: italic;
+      float: right;
+    }
+  }
+  
+  .body_comment {
+    margin-top: 20px;
+    padding-left: 10px;
+  }
+  
+}
+
+
