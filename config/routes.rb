@@ -1,5 +1,17 @@
 JqueryTest::Application.routes.draw do
 	
+  resources :questions
+
+  resources :surveys do
+  	get 'add_question', :on => :member
+  end
+
+  resources :users do
+  	get 'show_more', :on => :member
+  end
+  resources :articles
+
+
   resources :posts do
   	collection do
   		get 'test'

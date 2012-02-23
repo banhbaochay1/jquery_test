@@ -1,0 +1,14 @@
+<%= content_tag_for :div, user do %>
+	<%= content_tag :div, :class => 'user_name left' do %>
+		<%= user.name %>
+		<%= tag :br %>
+		(<%= link_to "Hide", show_more_user_path(user), :id => "show_hide_#{user.id}", :remote => true %>)
+	<% end %>
+	<%= content_tag :div, :class => 'user_profile right' do %>
+		ID: <%= user.id %>
+		<%= tag :br %>
+		Age: <%= user.age %>
+		<%= tag :br %>
+		Email: <%= user.email %>
+	<% end %>
+<% end %>

@@ -1,0 +1,19 @@
+<%= form_for @user do |f| %>
+	<div class="field">
+		<%= f.label :user_name %><br/>
+		<%= f.text_field :name %><br/>
+		<%= f.label :email %><br/>
+		<%= f.text_field :email %><br/>
+		<%= f.label :age %><br/>
+		<%= f.text_field :age %>
+	</div>
+	<div class="articles">
+		<%= f.fields_for :articles do |builder| %>
+			<%= builder.label :article_name %>
+			<%= builder.text_field :content %><br/>
+		<% end %>
+	</div>
+	<div class="actions">
+		<%= f.submit "Update" %>
+	</div>
+<% end %>

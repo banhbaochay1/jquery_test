@@ -141,3 +141,10 @@ div.flash.notice
 	text-align:right;
 }
 
+.header {
+	color: gray;
+	text-align: center;
+	font-size: 3em;
+	margin-bottom: 50px;
+}
+

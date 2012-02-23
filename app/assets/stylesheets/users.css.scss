@@ -1,0 +1,45 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$left-width: 30%;
+$right-width: 60%;
+
+
+.user {
+  margin-bottom: 30px;
+  min-height: 100px;
+  
+  .user_name {
+    padding-left: 50px;
+    &:first-line {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  }
+  
+  .user_profile {
+    background-color: #E5EEED;
+    border-radius: 10px;
+    border: 1px solid #A4A4A4;
+    padding: 5px 0 5px 10px;
+  }
+}
+
+div#users {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.left {
+  float: left;
+  width: $left-width;
+}
+
+.right {
+  float: right;
+  width: $right-width;
+}
+
+.clr {
+  clear: both;
+}

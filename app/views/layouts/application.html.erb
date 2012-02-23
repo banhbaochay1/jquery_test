@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>JqueryTest</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-<hr/>
-<%= debug(params) %><br/>Inspect params:<br/>
-<%= params.inspect %>
-</body>
+	<head>
+	  <title>JqueryTest</title>
+	  <%= stylesheet_link_tag    "application" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div class="header">
+			<%= @header || "No header" %>
+		</div>
+		<%= yield %>
+		
+		<hr/>
+		<%= debug(params) %>
+	</body>
 </html>

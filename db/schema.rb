@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120214152425) do
+ActiveRecord::Schema.define(:version => 20120220145428) do
+
+  create_table "articles", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "articles", ["user_id"], :name => "index_articles_on_user_id"
 
   create_table "comments", :force => true do |t|
     t.string   "name"
@@ -27,6 +37,19 @@ ActiveRecord::Schema.define(:version => 20120214152425) do
     t.datetime "updated_at"
   end
 
+  create_table "questions", :force => true do |t|
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "survey_id"
+  end
+
+  create_table "surveys", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "tests", :force => true do |t|
     t.string   "name"
     t.integer  "post_id"
@@ -35,5 +58,13 @@ ActiveRecord::Schema.define(:version => 20120214152425) do
   end
 
   add_index "tests", ["post_id"], :name => "index_tests_on_post_id"
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "age"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
